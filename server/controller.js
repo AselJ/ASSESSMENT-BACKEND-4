@@ -1,13 +1,19 @@
+const fortunes = ["A lifetime friend shall soon be made",
+"Beauty in its various forms appeals to you.",
+"Curiosity kills boredom. Nothing can kill curiosity."
+];
+
 module.exports = {
 
-    getCompliment: (req, res) => {
-        const compliments = ["Gee, you're a smart cookie!", "Cool shirt!", "Your Javascript skills are stellar."];
+
+    getFortune: (req, res) => {
+        
       
-        // choose random compliment
-        let randomIndex = Math.floor(Math.random() * compliments.length);
-        let randomCompliment = compliments[randomIndex];
-      
-        res.status(200).send(randomCompliment);
+        // choose random fortune
+        let randomIndex = Math.floor(Math.random() * fortunes.length);
+        let randomFortune = fortunes[randomIndex];
+    
+        res.status(200).send(randomFortune);
     }
 
 }
